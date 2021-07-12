@@ -1,6 +1,6 @@
 ---
 - name: Sock tunnel setup
-  hosts: "{{ list_host }}"
+ # hosts: "{{ list_host }}"
   gather_facts: false
   roles:
     - role: vmdelete
