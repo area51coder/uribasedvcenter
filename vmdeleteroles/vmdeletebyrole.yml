@@ -1,6 +1,6 @@
 ---
 - name: vm delete
-  hosts: "{{ list_host }}"
+  hosts: nonexistence
   gather_facts: False
 
   tasks:
