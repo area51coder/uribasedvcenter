@@ -6,4 +6,4 @@
   tasks:
   - name: vm delete
     include_role:
-      name: vmdelete1
+      name: vmdelete
