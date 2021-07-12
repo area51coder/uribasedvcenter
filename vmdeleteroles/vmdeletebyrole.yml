@@ -1,6 +1,6 @@
 ---
 - name: vm delete
-  hosts: nonexistence
+  hosts: localhost
   gather_facts: False
 
   tasks:
