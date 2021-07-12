@@ -1,9 +1,6 @@
 ---
-- hosts: nonexistent
-  tasks:
-  - debug:
-
-- hosts: localhost
+- name: Sock tunnel setup
+  hosts: "{{ list_host }}"
   gather_facts: false
   roles:
     - role: vmdelete
