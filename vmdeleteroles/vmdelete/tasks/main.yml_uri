@@ -1,0 +1,30 @@
+    - name: vCenter Login
+      uri:
+        url: "https://{{list_host}}/rest/com/vmware/cis/session"
+        force_basic_auth: yes
+        method: POST
+        user: "{{vcenter_user}}"
+        password: "{{vcenter_password}}"
+        status_code: 200
+        validate_certs: no
+      register: login
+
+    - name: Get hosts from vCenter
+      uri:
+        url: "https://{{list_host}}/rest/vcenter/host"
+        force_basic_auth: yes
+        validate_certs: no
+        headers:
+          Cookie: "{{login.set_cookie}}"
+      register: vchosts
+    - debug: var=vchosts
+
+    - name: Get vms from vCenter
+      uri:
+        url: "https://{{list_host}}/rest/vcenter/vm"
+        force_basic_auth: yes
+        validate_certs: no
+        headers:
+          Cookie: "{{login.set_cookie}}"
+      register: vms
+    - debug: var=vms
