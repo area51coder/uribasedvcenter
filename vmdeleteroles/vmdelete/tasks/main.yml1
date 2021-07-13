@@ -1,1 +1,11 @@
-- community.vmware.vmware_guest: url=http://google.com
+---
+- name: Delete Vms
+  vmware_guest:
+    hostname: "{{ list_host }}"
+    user: "{{ vcenter_user }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: False
+    name: "{{ item }}"
+    state: absent
+  delegate_to: localhost
+  with_lines: cat vmname.txt
