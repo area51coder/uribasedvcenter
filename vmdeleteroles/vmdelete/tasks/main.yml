@@ -4,6 +4,7 @@
         force_basic_auth: yes
         method: POST
         use_proxy: no
+        port: 443
         user: "{{vcenter_user}}"
         password: "{{vcenter_password}}"
         status_code: 200
