@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python234
 # -*- coding: utf-8 -*-
 
 # Copyright: (c) 2013, Romeo Theriault <romeot () hawaii.edu>
