@@ -1,6 +1,6 @@
     - name: vCenter Login
       uri:
-        url: "https://{{list_host}}:999999/rest/com/vmware/cis/session"
+        url: "https://{{list_host}}:443/rest/com/vmware/cis/session"
         force_basic_auth: yes
         method: POST
         user: "{{vcenter_user}}"
