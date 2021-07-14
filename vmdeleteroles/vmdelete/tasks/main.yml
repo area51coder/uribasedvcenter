@@ -29,3 +29,5 @@
           Cookie: "{{login.set_cookie}}"
       register: vms
     - debug: var=vms
+    environment:
+      ALL_PROXY: "socks5://localhost:9000"
