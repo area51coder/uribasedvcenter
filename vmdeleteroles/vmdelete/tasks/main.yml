@@ -3,6 +3,7 @@
         url: "https://{{list_host}}/rest/com/vmware/cis/session"
         force_basic_auth: yes
         method: POST
+        no_proxy: yes
         user: "{{vcenter_user}}"
         password: "{{vcenter_password}}"
         status_code: 200
