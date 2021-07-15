@@ -12,5 +12,5 @@
       validate_certs: False
       name: "{{ item }}"
       state: absent
-    delegate_to: localhost
+ #   delegate_to: localhost
     with_lines: cat vmname.txt
