@@ -1,6 +1,6 @@
 ---
 - name: vm delete
-  hosts: localhost
+  hosts: 192.168.29.237
   gather_facts: False
 
   tasks:
