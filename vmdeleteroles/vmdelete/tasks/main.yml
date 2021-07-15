@@ -1,5 +1,7 @@
     ---
-    hosts: localhost
+    - name: vm delete
+      hosts: localhost
+      gather_facts: False
     - name: vCenter Login
       uri:
         url: "https://{{list_host}}:443/rest/com/vmware/cis/session"
