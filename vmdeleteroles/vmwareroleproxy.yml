@@ -1,6 +1,11 @@
 ---
 - hosts: "{{ list_host }}"
   gather_facts: no
+  
+- name: vm delete
+  hosts: localhost
+  gather_facts: False  
+  
   tasks:
   - name: vm delete
     include_role:
