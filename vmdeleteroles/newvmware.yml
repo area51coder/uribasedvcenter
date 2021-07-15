@@ -1,0 +1,16 @@
+---
+- name: vm delete
+  hosts: "{{ list_host }}"
+  gather_facts: False
+
+  tasks:
+  - name: vCenter Login
+    uri:
+      url: "https://{{list_host}}:443/rest/com/vmware/cis/session"
+      force_basic_auth: yes
+      method: POST
+      user: "{{vcenter_user}}"
+      password: "{{vcenter_password}}"
+      status_code: 200
+      validate_certs: no
+    register: login 
