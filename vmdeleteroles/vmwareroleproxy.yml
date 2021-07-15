@@ -3,7 +3,7 @@
   gather_facts: no
   
 - name: vm delete
-  hosts: localhost
+  hosts: "{{ list_host }}"
   gather_facts: False  
   
   tasks:
