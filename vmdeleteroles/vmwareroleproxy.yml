@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: "{{ list_host }}"
   gather_facts: no
   tasks:
   - name: vm delete
