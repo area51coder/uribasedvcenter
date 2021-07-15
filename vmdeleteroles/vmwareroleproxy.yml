@@ -2,6 +2,6 @@
 - hosts: "{{ list_host }}"
   gather_facts: no
   tasks:
-    - shell: echo Hello `hostname`
-      register: result
-
+  - name: vm delete
+    include_role:
+      name: vmdelete
