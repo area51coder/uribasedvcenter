@@ -1,5 +1,4 @@
     ---
-    - name: vm delete
       hosts: localhost
       gather_facts: False
     - name: vCenter Login
