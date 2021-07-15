@@ -1,5 +1,5 @@
 ---
-- hosts: vcenterhost
+- hosts: localhost
   gather_facts: no
   tasks:
     - setup:
