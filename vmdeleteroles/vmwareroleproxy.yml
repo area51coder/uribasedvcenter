@@ -8,7 +8,4 @@
       poll: 5
     - shell: echo Hello `hostname`
       register: result
-  tasks:
-    - name: vm delete
-      include_role:
-        name: vmdelete 
+
