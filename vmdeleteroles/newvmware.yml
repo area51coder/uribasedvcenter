@@ -13,4 +13,5 @@
       password: "{{vcenter_password}}"
       status_code: 200
       validate_certs: no
+      proxy_host: 192.168.29.186
     register: login 
